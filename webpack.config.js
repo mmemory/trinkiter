@@ -17,11 +17,10 @@ module.exports = {
   watch: true,
   plugins: [
     new HTMLWebpackPlugin({
-      title: 'Trinkiter: trading your stuff, but fun'
+      template: PATHS.app + '/index.template.html'
     })
   ],
   module: {
-
     rules: [
       {
         test: /trinkiter.+\.js$/,
@@ -29,6 +28,5 @@ module.exports = {
         use: 'babel-loader'
       }
     ]
-
   }
 };
